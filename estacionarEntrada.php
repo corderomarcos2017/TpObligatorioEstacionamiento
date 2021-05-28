@@ -8,7 +8,6 @@
     <meta name="generator" content="Hugo 0.80.0">
     <title>Signin Template · Bootstrap v4.6</title>
 
-
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/sign-in/">
 
     
@@ -41,21 +40,16 @@
   </head>
   <body class="text-center">
     
-<form class="form-signin" action="hacerlogin.php" method="POST">
+<form class="form-signin" action="estacionarEntradaHacer.php" method="POST">
   <img class="mb-4" src="https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/bootstrap-4.png" alt="" width="72" height="72">
-  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-  <label for="inputEmail" class="sr-only">Email address</label>
-  <input name="correo" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-  <label for="inputPassword" class="sr-only">Password</label>
-  <input name="clave" type="Password" id="inputPassword" class="form-control" 
-  placeholder="Password" required>
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Remember me
-    </label>
-  </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-  <p class="mt-5 mb-3 text-muted">&copy; 2017-2021</p>
+  <h1 class="h3 mb-3 font-weight-normal">Entrada de Vehiculo</h1>
+  <label for="inputEmail" class="sr-only">Ingrese Nro. de patente</label>
+  <label>Ingrese Nro. de patente</label>
+  <br>
+  <input name="patente" type="text" id="idPatente" class="form-control" placeholder="Patente" required autofocus>
+  <br>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Cargar patente</button>
+  <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
 </form>
 
 

@@ -6,11 +6,11 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
-    <title>Jumbotron Template · Bootstrap v4.6</title>
+    <title>Estacionamiento</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/jumbotron/">
 
-    
+        <link  rel="icon"   href="calen.ico" type="ico" />
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -52,6 +52,10 @@
       <li class="nav-item active">
         <a class="nav-link" href="login.php">Login <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="estacionar.php">Estacionar <span class="sr-only">(current)</span></a>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="error.php">Testin Error</a>
       </li>
