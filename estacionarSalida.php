@@ -7,7 +7,6 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
     <title>Signin Template · Bootstrap v4.6</title>
-       <link  rel="icon"   href="calen.ico" type="ico" />
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/sign-in/">
     <!-- Bootstrap core CSS -->
     <!--link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"   CODIGO ABSOLUTO... NO NO SIRVE!!!--> 
