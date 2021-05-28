@@ -9,7 +9,7 @@
     <!--title>Pricing example · Bootstrap v4.6</title-->
     <title>Estacionar</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/pricing/">
-        <link  rel="icon"   href="favicon.ico" type="image/png" />
+        <link  rel="icon"   href="favicon.ICO" type="image/png" />
     
 
     <!-- Bootstrap core CSS -->
