@@ -36,11 +36,11 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
+    <link href="archivoscss/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
     
-<form class="form-signin" action="hacerregistro.php" method="POST">
+<form class="form-signin" action="registrohacer.php" method="POST">
   <img class="mb-4" src="https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/bootstrap-4.png" alt="" width="72" height="72">
   <h1 class="h3 mb-3 font-weight-normal">Registrate</h1>
   <label for="inputEmail" class="sr-only">Email address</label>

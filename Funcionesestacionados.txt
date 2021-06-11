@@ -1,0 +1,22 @@
+estacionados
+
+leerestaciones
+
+
+guardarestacionados
+recibe un array de los autos estacionados y los va a guardar..
+
+
+
+
+funcionestacionamientos
+------------------------
+calculartiempo
+calcularimporte
+LeerEstacionados
+GuardarEstacionados
+LeerCobrados
+GuardarCobrados
+
+
+

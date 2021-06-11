@@ -3,3 +3,6 @@ encriptar clave
 TAREA
 poder registrar una patente 
 guardar la patente con la fecha y la hora que se ingreso
+
+Investigar
+funcion fpdf

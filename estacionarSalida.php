@@ -1,12 +1,25 @@
 <!doctype html>
 <html lang="en">
   <head>
+  
+
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
+  <script type="text/javascript" src="js/funcionAutoCompletar.js"></script>
+
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
-    <title>Signin Template · Bootstrap v4.6</title>
+    <!--title>Signin Template · Bootstrap v4.6</title-->
+    <?php
+      include_once "titulo.php";
+    ?>
+
+
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/sign-in/">
     <!-- Bootstrap core CSS -->
     <!--link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"   CODIGO ABSOLUTO... NO NO SIRVE!!!--> 
@@ -32,20 +45,34 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
+    <link href="archivoscss/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
-    
-<form class="form-signin" action="estacionarSalidaHacer.php" method="POST">
-  <img class="mb-4" src="https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/bootstrap-4.png" alt="" width="72" height="72">
-  <h1 class="h3 mb-3 font-weight-normal">Salida de Vehiculo</h1>
-  <label for="inputEmail" class="sr-only">Ingrese Nro. de patente</label>
-  <label>Ingrese Nro. de patente</label>
-  <br>
-  <input name="patente" type="text" id="idPatente" class="form-control" placeholder="Patente" required autofocus>
-  <br>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Salida de patente</button>
-  <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
-</form>
+    <?php
+        include_once "tablaestacionados.php";
+    ?>
+    <?php
+      include "ClaseEstacionamiento.php";
+      $listado=estacionamiento::leer("estacionados");
+    ?>    
+    <form class="form-signin" action="estacionarSalidaHacer.php" method="POST">
+      <img class="mb-4" src="https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/bootstrap-4.png" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Salida de Vehiculo</h1>
+      <label for="inputEmail" class="sr-only">Ingrese Nro. de patente</label>
+      <label>Ingrese Nro. de patente</label>
+      <br>
+      <!--input name="patente" type="text" id="idPatente" class="form-control" placeholder="Patente" required autofocus-->
+
+      <input type="text name="patente" title="formato de patente: AAA666" class="form-control" placeholder="Patente" required autofocus id="autocomplete" />
+
+      <br>
+      
+      <?php 
+       // include "estacionarsalidaSelect.php";
+      ?>
+      <br>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Salida de patente</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+    </form>
   </body>
 </html>

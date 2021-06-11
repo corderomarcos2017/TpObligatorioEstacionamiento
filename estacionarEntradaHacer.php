@@ -1,16 +1,13 @@
 <?php
-//var_dump($_POST); 
-
+//include "funcionesEstacionamiento.php";
+include "ClaseEstacionamiento.php";
 $patente=$_POST['patente'];
-
-if($patente!="")
-{
-	date_default_timezone_set("America/Argentina/Buenos_Aires");
+if($patente!=""){
 	$ahora=date("Y-m-d H:i");
-	$renglon = "\n".$patente."|".$ahora;
-	$archivo=fopen("patentes.txt","a");
-	fwrite($archivo, $renglon);
-	fclose($archivo);
+	GuardarArchivo("\n".$patente."|".$ahora,"estacionados.txt");
+	estacionamiento::CrearTabla("estacionados");	//Necesito la clase 
+	estacionamiento::CrearTabla("cobrados");        //Necesito la clase
+	include "generarAutocompletar.php";
 
 	header("Location: estacionar.php");
 
@@ -18,7 +15,6 @@ if($patente!="")
 	echo "ERROR en No cargo bien la patente";
 	header("Location: estacionarEntrada.php");
 }
-
 ?>
 
 
