@@ -68,7 +68,7 @@
       <br>
       
       <?php 
-       // include "estacionarsalidaSelect.php";
+        include "generarAutocompletar.php";
       ?>
       <br>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Salida de patente</button>

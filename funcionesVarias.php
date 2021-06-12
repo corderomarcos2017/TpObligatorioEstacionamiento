@@ -8,40 +8,31 @@
         */
 
         $grupo=0;
-        $grupos=["","001","002","003","004","005"];
-        $unidad="" ; $decena=""  ; $centena=""; 
-        $unilet="" ; $declet=""  ; $cenlet="";
-        $conect="" ; $enletra=""; $numstr=""  ;
-        $entero="" ; $n=0;
+        $grupos=["","111","222","333","444","555"];
+
+        $unidad="" ; $decena="" ; $centena=""; 
+        $unilet="" ; $declet="" ; $cenlet="";
+        $conect="" ; $enletra=""; $entero="" ; 
 
         $entero = trim($numero);
         $entero = str_repeat("0", 15 - strlen($entero)) . $entero;
+        echo "$entero <br>";
 
-        //echo $entero . "<br>";
-        $numstr = $entero;
-        
         //--- Separar la cifra en 5 $grupos ------
-        echo "Valor :" . $numstr . "<br>";
+        $inicio=12;
         for($grupo=5;$grupo>=1;$grupo--){
-            
-            $unidad = $grupos[$grupo]%10;
-            $decena = $grupos[$grupo]%100/10;
-            $centena = $grupos[$grupo]%1000/100;
-            
-            //$grupos[$grupo]=$centena.$decena.$unidad;
+            $grupos[$grupo]=substr($entero, $inicio,3);
+            $inicio = $inicio -3 ;
+        }        
 
-            echo "Unidad: " . $unidad ;
-            echo "decena: " . $decena ;
-            echo "centena: " . $centena  ;
-            echo "<br> Indice:" . $grupo . " " .$grupos[$grupo] . " " . $numstr . "<br>";
-        }
-        
         //--- Proceso de union ----------------
         $enletra = "";
-        for($grupo=5;$grupo>=1;$grupo--) {
-            $unidad = substr($grupos[$grupo], 1);
-            $decena = substr($grupos[$grupo], 2, 1);
-            $centena = substr($grupos[$grupo], 3, 1);
+        for($grupo=1;$grupo<=5;$grupo++) {
+            $unidad  = substr($grupos[$grupo], 2);
+            $decena  = substr($grupos[$grupo], 1, 1);
+            $centena = substr($grupos[$grupo], 0, 1);
+            echo "grupo:$grupo -> $grupos[$grupo] -> centena:$centena decena:$decena unidad:$unidad <br>";
+
             //------ Determino las $unidades ---
             switch ($unidad) {
                 Case 0: 
@@ -121,79 +112,66 @@
             }
             //------ Determino las $decenas ---
             switch($decena){
-                Case 0: 
-                    $declet = "";
-                    break;
-                Case 1: 
-                    if($unidad == "0") {
-                       $declet = "DIEZ "; 
-                    }else {
-                       $declet = ""; 
-                    }  
-                    break;
-                Case 2: 
-                    if($unidad == "0") {
-                       $declet = "VEINTE "; 
-                    }else {
-                       $declet = "VEINTI"; 
-                    }  
-                    break;
-                Case 3: 
-                    if($unidad == "0") {
-                       $declet = "TREINTA "; 
-                    }else {
-                       $declet = "TREINTA Y "; 
-                    }  
-                    break;
-                Case 4: 
-                    if($unidad == "0") {
-                       $declet = "CUARENTA "; 
-                    }else {
-                       $declet = "CUARENTA Y "; 
-                    }  
-                    break;
-                Case 5: 
-                    if($unidad == "0") {
-                       $declet = "CINCUENTA "; 
-                    }else {
-                       $declet = "CINCUENTA Y "; 
-                    }  
-                    break;
-                Case 6: 
-                    if($unidad == "0") {
-                       $declet = "SESENTA "; 
-                    }else {
-                       $declet = "SESENTA Y "; 
-                    }  
-                    break;
-                Case 7: 
-                    if($unidad == "0") {
-                       $declet = "SETENTA "; 
-                    }else {
-                       $declet = "SETENTA Y "; 
-                    }  
-                    break;
-                Case 8: 
-                    if($unidad == "0") {
-                       $declet = "OCHENTA "; 
-                    }else {
-                       $declet = "OCHENTA Y "; 
-                    }  
-                    break;
-                Case 9: 
-                    if($unidad == "0") {
-                       $declet = "NOVENTA "; 
-                    }else {
-                       $declet = "NOVENTA Y "; 
-                    }  
-                    break;
+                Case 0: $declet = "";break;
+                Case 1: if($unidad == "0") {
+                            $declet = "DIEZ "; 
+                        }else {
+                            $declet = ""; 
+                        }  
+                        break;
+                Case 2: if($unidad == "0") {
+                            $declet = "VEINTE "; 
+                        }else {
+                            $declet = "VEINTI"; 
+                        }  
+                        break;
+                Case 3: if($unidad == "0") {
+                            $declet = "TREINTA "; 
+                        }else {
+                            $declet = "TREINTA Y "; 
+                        }  
+                        break;
+                Case 4: if($unidad == "0") {
+                            $declet = "CUARENTA "; 
+                        }else {
+                            $declet = "CUARENTA Y "; 
+                        }  
+                        break;
+                Case 5: if($unidad == "0") {
+                            $declet = "CINCUENTA "; 
+                        }else {
+                            $declet = "CINCUENTA Y "; 
+                        }  
+                        break;
+                Case 6: if($unidad == "0") {
+                            $declet = "SESENTA "; 
+                        }else {
+                            $declet = "SESENTA Y "; 
+                        }  
+                        break;
+                Case 7: if($unidad == "0") {
+                            $declet = "SETENTA "; 
+                        }else {
+                            $declet = "SETENTA Y "; 
+                        }  
+                        break;
+                Case 8: if($unidad == "0") {
+                            $declet = "OCHENTA "; 
+                        }else {
+                            $declet = "OCHENTA Y "; 
+                        }  
+                        break;
+                Case 9: if($unidad == "0") {
+                            $declet = "NOVENTA "; 
+                        }else {
+                            $declet = "NOVENTA Y "; 
+                        }  
+                        break;
             }
             //------ Determino la $centenas ---
             switch($centena){
-               Case 0: 
-                    $cenlet = "";
-                    break;
-               Case 1: $cenlet = IIf($decena & $unidad = "00", "CIEN ", "CIENTO ");
+               Case 0: $cenlet = "";break;
+               Case 1: 
                     if($decena & $unidad == "00") {
                       $cenlet = "CIEN "; 
                     }else {
@@ -227,49 +205,53 @@
             }
             //------ Determino los $conectores Ej: mil o Millones ---
             switch($grupo){
-                Case 1: 
+                Case 5: 
                     $conect = "";
-                Case 2: 
-                    if($grupos[2] > "000") {
-                      $conect = "MIL "; 
-                    }else {
+                    break;
+                Case 4: 
+                    if($grupos[4] == "000") {
                       $conect = ""; 
+                    }else {
+                      $conect = "MIL "; 
                     }  
                     break;
                 Case 3: 
-                    if($grupos[3] > "000" ||$grupos[4] > "000"){
+
+                    if($grupos[3] == "000"){
+                        $conect = "";                                         
+                    } else {            
                         if($grupos[3] == "001"){
                             $conect = "MILLON ";        
                         } else {
                             $conect = "MILLONES ";        
                         }
-                    } else {
-                        $conect = "";                                
                     }
-                Case 4: 
-                    if($grupos[4] > "000") {
-                      $conect = "MIL "; 
-                    }else {
+                    break;
+                Case 2: 
+                    if($grupos[2] == "000") {
                       $conect = ""; 
+                    }else {
+                      $conect = "MIL "; 
                     }  
                     break;
-                Case 5: 
-                    if($grupos[5] > "000") {
-                        if($grupos[3] == "001"){
+                Case 1: 
+
+                    if($grupos[1] == "000") {
+                      $conect = "";   
+                    }else {
+                        if($grupos[1] == "001"){
                             $conect = "BILLON ";        
                         } else {
                             $conect = "BILLONES ";        
                         }
-                    }else {
-                      $conect = ""; 
                     }  
                     break;
             }
             //------- Union de todos los $grupo para forma la fraze -------
             $enletra = $enletra . $cenlet . $declet . $unilet . $conect;
         }
-        return $enletra . " con " . $vDecimal . " centavos";
+        return $enletra;
     }
-    $a=125;
+    $a=222444123125;
     echo "El numero es: " . $a . " " . letras($a);
 ?>
