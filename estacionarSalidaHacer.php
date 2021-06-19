@@ -1,6 +1,5 @@
 <?php
 
-	//include_once "funcionesEstacionamiento.php";
 	include "ClaseEstacionamiento.php";
 
 	if (isset($_POST['patente'])) {
@@ -8,6 +7,8 @@
 	}else {
 		die();
 	}
+
+
 
 	//$matrizDePatentes=LeerArchivo("estacionados.txt", "|");
 	$matrizDePatentes=estacionamiento::leer("estacionados");
@@ -18,10 +19,12 @@
 			$ingreso="SI";
 			$fechaIni=$datos[1];           //Fecha y hora entrada
 			$fechaFin=date("Y-m-d H:i");   //Fecha y hora Salida
-			
-			$precio=CalcularTotal($fechaIni, $fechaFin);
+			$gnc=$datos[2];  
+			$vehiculo=$datos[3];
+			$precio=CalcularTotal($fechaIni, $fechaFin,$vehiculo);
+
 			MostrarResultados($patente, $fechaIni, $fechaFin, $precio);
-			GuardarArchivo("\n".$patente."|".QuitarUltimoCaracter($fechaIni)."|".$fechaFin."|".$precio,"cobrados.txt"); //Cobrados
+			GuardarArchivo("\n".$patente."|".$fechaIni."|".$fechaFin."|".$precio."|".$gnc."|".$vehiculo,"cobrados.txt"); //Cobrados
 			break;
 		}
 	}
@@ -33,10 +36,10 @@
 		CrearArchivo("estacionados.txt");
 		foreach ($matrizDePatentes as $datos){
 			if($datos[0]!=$patente){
-				GuardarArchivo("\n".$datos[0]."|".QuitarUltimoCaracter($datos[1]),"estacionados.txt"); 
+				GuardarArchivo("\n".$datos[0]."|".$datos[1]."|".$datos[2]."|".$datos[3]."|X","estacionados.txt"); 
 			}
 		}
-		estacionamiento::CrearTabla("estacionados");	//Necesito la clase 
-		estacionamiento::CrearTabla("cobrados");        //Necesito la clase
+		estacionamiento::CrearTabla("estacionados");	
+		estacionamiento::CrearTabla("cobrados");   
 	}
 ?>

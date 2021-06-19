@@ -3,7 +3,7 @@ $(function(){
 			  var patentes = [ 
 
 			    	
-			    "aaa123","bbb102","ABC333","FFF456","aaa444","hhh123","ttt555","ttt555","aaa888","qqq123","qqq123","rrr123",	
+			    "yyy666","pepito111",	
 
 
 

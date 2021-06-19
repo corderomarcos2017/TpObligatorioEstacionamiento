@@ -49,21 +49,21 @@
   </head>
   <body class="text-center">
     <?php
-        include_once "tablaestacionados.php";
-    ?>
-    <?php
       include "ClaseEstacionamiento.php";
-      $listado=estacionamiento::leer("estacionados");
+        estacionamiento::CrearTabla("estacionados");  
+        estacionamiento::CrearTabla("cobrados");        
+        $listado=estacionamiento::leer("estacionados");
+        include_once "tablaestacionados.php";
+
     ?>    
+   
     <form class="form-signin" action="estacionarSalidaHacer.php" method="POST">
       <img class="mb-4" src="https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/bootstrap-4.png" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Salida de Vehiculo</h1>
       <label for="inputEmail" class="sr-only">Ingrese Nro. de patente</label>
       <label>Ingrese Nro. de patente</label>
       <br>
-      <!--input name="patente" type="text" id="idPatente" class="form-control" placeholder="Patente" required autofocus-->
-
-      <input type="text name="patente" title="formato de patente: AAA666" class="form-control" placeholder="Patente" required autofocus id="autocomplete" />
+      <input type="text" name="patente" title="formato de patente: AAA666" class="form-control" placeholder="Patente" required autofocus id="autocomplete" />
 
       <br>
       

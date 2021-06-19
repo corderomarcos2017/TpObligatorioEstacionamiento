@@ -1,10 +1,23 @@
 <?php
 //include "funcionesEstacionamiento.php";
 include "ClaseEstacionamiento.php";
-$patente=$_POST['patente'];
+if(isset($_POST['patente'])) {
+	$patente=$_POST['patente'];	
+	$gnc=$_POST['gnc'];	
+	$vehiculo=$_POST['vehiculo'];	//moto/auto/camioneta
+} else {
+	die();
+}
+
+
 if($patente!=""){
 	$ahora=date("Y-m-d H:i");
-	GuardarArchivo("\n".$patente."|".$ahora,"estacionados.txt");
+	if($gnc=="gnc") {
+		$GuardarTieneGNC="SIGNC";
+	}else {
+		$GuardarTieneGNC="NOGNC";		
+	}
+	GuardarArchivo("\n".$patente."|".$ahora."|".$GuardarTieneGNC."|".$vehiculo."|X","estacionados.txt");
 	estacionamiento::CrearTabla("estacionados");	//Necesito la clase 
 	estacionamiento::CrearTabla("cobrados");        //Necesito la clase
 	include "generarAutocompletar.php";

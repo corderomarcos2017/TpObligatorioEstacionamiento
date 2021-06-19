@@ -50,6 +50,14 @@
   <br>
   <input name="patente" type="text" id="idPatente" class="form-control" placeholder="Patente" required autofocus>
   <br>
+  <input type="checkbox" name="gnc" value="gnc">Tiene GNC</input>
+  <br>
+  <input type="radio" id="vehiculo" name="vehiculo" value="auto">Auto
+  <input type="radio" id="vehiculo" name="vehiculo" value="camioneta">Camioneta
+  <input type="radio" id="vehiculo" name="vehiculo" value="moto">Moto<br>
+
+<br>
+
   <button class="btn btn-lg btn-primary btn-block" type="submit">Cargar patente</button>
   <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
 </form>
