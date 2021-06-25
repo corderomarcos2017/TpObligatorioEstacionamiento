@@ -21,9 +21,7 @@
 
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/sign-in/">
-    <!-- Bootstrap core CSS -->
-    <!--link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"   CODIGO ABSOLUTO... NO NO SIRVE!!!--> 
-
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <style>
@@ -50,27 +48,27 @@
   <body class="text-center">
     <?php
       include "ClaseEstacionamiento.php";
-      $listado=estacionamiento::leer("estacionados");
-      include_once "tablaestacionados.php";
+        $listado=estacionamiento::leer("estacionados");
+        include_once "tablaestacionados.php";
+
     ?>    
    
-    <form class="form-signin" action="estacionarSalidaHacer.php" method="POST">
+    <form enctype="multipart/form-data" class="form-signin" action="estacionarSubirImagenHacer.php" method="POST">
       <img class="mb-4" src="https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/bootstrap-4.png" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Salida de Vehiculo</h1>
-      <label for="inputEmail" class="sr-only">Ingrese Nro. de patente</label>
-      <label>Ingrese Nro. de patente</label>
+      <h1 class="h3 mb-3 font-weight-normal">Imagen del Vehiculo</h1>
+      <label>Seleccione la imagen a subir</label>
       <br>
       <input type="text" name="patente" title="formato de patente: AAA666" class="form-control" placeholder="Patente" required autofocus id="autocomplete" />
+      <br><br>
+      <input type="file"  name="archivoImagen">
 
-      <br>
-      
+
       <?php 
         include "generarAutocompletar.php";
       ?>
+
       <br>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Salida de patente</button>
-
-
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Subir Imagen</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
     </form>
   </body>

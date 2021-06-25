@@ -50,11 +50,12 @@
   <br>
   <input name="patente" type="text" id="idPatente" class="form-control" placeholder="Patente" required autofocus>
   <br>
-  <input type="checkbox" name="gnc" value="gnc">Tiene GNC</input>
-  <br>
   <input type="radio" id="vehiculo" name="vehiculo" value="auto">Auto
   <input type="radio" id="vehiculo" name="vehiculo" value="camioneta">Camioneta
   <input type="radio" id="vehiculo" name="vehiculo" value="moto">Moto<br>
+  <br>
+  <input type="checkbox" name="gnc" value="gnc">Tiene GNC</input>
+  <br>
 
 <br>
 

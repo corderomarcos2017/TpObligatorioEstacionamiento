@@ -1,1 +1,1 @@
-<table border=1><th>patente</th><th>Ingreso</th><tr><td>pepito111</td><td>2021-06-18 20:16</td></tr></table>
+<table border=1><th>patente</th><th>Ingreso</th><tr><td>pepito111</td><td>2021-06-18 20:16</td></tr><tr><td>a123</td><td>2021-06-24 19:07</td></tr></table>

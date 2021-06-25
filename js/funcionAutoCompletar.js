@@ -3,7 +3,7 @@ $(function(){
 			  var patentes = [ 
 
 			    	
-			    "yyy666","pepito111",	
+			    "pepito111","a123",	
 
 
 
