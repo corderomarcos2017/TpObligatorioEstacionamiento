@@ -57,6 +57,7 @@
     <form class="form-signin" action="estacionarSalidaHacer.php" method="POST">
       <img class="mb-4" src="https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/bootstrap-4.png" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Salida de Vehiculo</h1>
+      <p>usuario conectado : <?php echo $_COOKIE["usuario"]?></p>    
       <label for="inputEmail" class="sr-only">Ingrese Nro. de patente</label>
       <label>Ingrese Nro. de patente</label>
       <br>

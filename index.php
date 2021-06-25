@@ -74,9 +74,11 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listados</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="generarEstacionados.php">Generar Estacionados</a>
-          <a class="dropdown-item" href="generarCobrados.php">Generar Cobrados</a>
-          <a class="dropdown-item" href="generarUsuarios.php">Generar Archivos de Usuarios</a>
+          <a class="dropdown-item" href="estacionarEntradaListado.php">Listados Estacionados</a>
+
+          <a class="dropdown-item" href="generarEstacionados.php">Generar Estacionados csv</a>
+          <a class="dropdown-item" href="generarCobrados.php">Generar Cobrados csv </a>
+          <a class="dropdown-item" href="generarUsuarios.php">Generar Archivos de Usuarioscsv</a>
         </div>
       </li>
     </ul>

@@ -15,7 +15,7 @@
 				echo "Bienvenido....";
 				setcookie("usuario",$datos[0]);
 				
-				header("Location: index.php");
+				header("Location: estacionarEntrada.php?usuario=$datos[0]");
 				$ingreso="SI";
 				break;
 			}

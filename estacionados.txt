@@ -1,3 +1,5 @@
 
-pepito111|2021-06-18 20:16|SIGNC|auto|X
-a123|2021-06-24 19:07|SIGNC|auto|X
+pepito111|2021-06-18 20:16|SIGNC|auto|corderomarcos2016@gmail.com|X
+ceci123|2021-06-25 17:44|NOGNC|moto|corderomarcos2016@gmail.com|X
+pepe555|2021-06-25 20:04|NOGNC|auto|corderomartias@gmail.com|X
+qqq333|2021-06-25 20:04|SIGNC|camioneta|corderomartias@gmail.com|X

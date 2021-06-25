@@ -1,33 +1,22 @@
 <?php
+	if (isset($_POST['correo']) && isset($_POST['clave'])) {
+		$mail=$_POST['correo'];
+		$clave=$_POST['clave'];
+		$copiaclave=$_POST['copiaclave'];		
+	}else {
+		die();
+	}
 
-
-/*var_dump($_GET);
-
-echo "<br>"; 
-var_dump($_POST); */
-
-$mail=$_POST['correo'];
-$clave=$_POST['clave'];
-$copiaclave=$_POST['copiaclave'];
-
-/*echo "Su correro es :" . $mail . "<br>";
-echo "Su clave es ". $clave . "<br>";
-echo "Su copia clave es ". $copiaclave;
-*/
+include "ClaseEstacionamiento.php";
 
 if($clave==$copiaclave)
 {
-	date_default_timezone_set("America/Argentina/Buenos_Aires");
 	$ahora=date("Y-m-d H:i:s");
-	$renglon = "\n".$mail."=>".$clave."=>" . $ahora;
-	$archivo=fopen("usuario.txt","a");
-	fwrite($archivo, $renglon);
-	
-	fclose($archivo);
-
-
+	$renglon = "\n".$mail."|".$clave."|" . $ahora;
+	GuardarArchivo($renglon,"usuario.txt");	
+	header("Location: index.php");
 } else {
-	echo "ERROR en clave";
+	echo "ERROR en clave, las contraseñas NO coinciden...";
 }
 
 ?>

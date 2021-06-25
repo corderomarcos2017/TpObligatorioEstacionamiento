@@ -22,7 +22,15 @@ if($vehiculo=="moto" && $gnc=="gnc") {
 		}else {
 			$GuardarTieneGNC="NOGNC";		
 		}
-		GuardarArchivo("\n".$patente."|".$ahora."|".$GuardarTieneGNC."|".$vehiculo."|X","estacionados.txt");
+		$directorio = 'imagenes/';
+		$subir_archivo=$directorio.$patente.".jpg";
+		if (move_uploaded_file($_FILES['archivoImagen']['tmp_name'], $subir_archivo)) {
+	       echo "El archivo es válido y se cargó correctamente.<br>";
+	    } else {
+	       echo "La subida ha fallado";
+	    }
+
+		GuardarArchivo("\n".$patente."|".$ahora."|".$GuardarTieneGNC."|".$vehiculo."|".$_COOKIE["usuario"]."|X","estacionados.txt");
 		estacionamiento::CrearTabla("estacionados");	//Necesito la clase 
 		estacionamiento::CrearTabla("cobrados");        //Necesito la clase
 		include "generarAutocompletar.php";

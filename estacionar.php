@@ -68,6 +68,7 @@
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">ESTACIONAR</h1>
   <p class="lead">Ingreso y Egreso de vehiculos al estacionamiento</p>
+  <p>usuario conectado : <?php echo $_COOKIE["usuario"]?></p>    
     <h1 id="HoraActual">00:00:00
 		<script>
 		    function myFunc()  {
@@ -98,6 +99,7 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">$2,00 <small class="text-muted">/ Minuto</small></h1>
         <ul class="list-unstyled mt-3 mb-4">
+
           <li>$ 100,00 x Hora</li>
           <li>$2000,00 x Día</li>
         </ul>

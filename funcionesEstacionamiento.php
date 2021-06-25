@@ -96,33 +96,6 @@
 		creaArchivocsv($nombreArchivo,$renglones);
 	}
 
-	/*
-	function generarCobrados() {
-		$arrayTemporal=LeerArchivo("cobrados.txt", "|");
-		$renglones="";
-		foreach ($arrayTemporal as $datos){
-			$renglones.=$datos[0].";".$datos[1].";".$datos[2].";".$datos[3];
-		}
-		creaArchivocsv("cobrados",$renglones);
-	}
-	function generarEstacionados() {
-		$arrayTemporal=LeerArchivo("estacionados.txt", "|");
-		$renglones="";
-		foreach ($arrayTemporal as $datos){
-			$renglones.=$datos[0].";".$datos[1];
-		}
-		creaArchivocsv("estacionados",$renglones);
-	}
-	function generarUsuarios() {
-		$arrayTemporal=LeerArchivo("usuario.txt", "|");
-		$renglones="";
-		foreach ($arrayTemporal as $datos){
-			$renglones.=$datos[0].";".$datos[1].";".$datos[2];
-		}
-		creaArchivocsv("usuarios",$renglones);
-	}
-	*/
-
 	function creaArchivocsv($nombreArchivo,$valores){
 		header("Content-Description: File Transfer");
 		header("Content-Type: application/force-download");

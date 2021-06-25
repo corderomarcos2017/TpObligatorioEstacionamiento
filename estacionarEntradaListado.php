@@ -42,22 +42,17 @@
   </head>
   <body class="text-center">
 
-<form enctype="multipart/form-data" class="form-signin" action="estacionarEntradaHacer.php" method="POST">
+<form enctype="multipart/form-data" class="form-signin" action="estacionarEntradaListadoHacer.php" method="POST">
   <img class="mb-4" src="https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/bootstrap-4.png" alt="" width="72" height="72">
-  <h1 class="h3 mb-3 font-weight-normal">Entrada de Vehiculo</h1>
+  <h1 class="h3 mb-3 font-weight-normal">Listado de Vehiculo Estacionados</h1>
   <p>usuario conectado : <?php echo $_COOKIE["usuario"]?></p>    
-  <label for="inputEmail" class="sr-only">Ingrese Nro. de patente</label>
-  <label>Ingrese Nro. de patente</label>
+  
+  <Select name="elegir" class="form-control" required autofocus>
+    <option value=1>TODOS</option>
+    <option value=2>X EL USUARIO ACTUAL</option>
+  </Select>
+
   <br>
-  <input name="patente" type="text" id="idPatente" class="form-control" placeholder="Patente" required autofocus>
-  <br>
-  <input type="radio" id="vehiculo" name="vehiculo" value="auto">Auto
-  <input type="radio" id="vehiculo" name="vehiculo" value="camioneta">Camioneta
-  <input type="radio" id="vehiculo" name="vehiculo" value="moto">Moto<br>
-  <br>
-  <input type="checkbox" name="gnc" value="gnc">Tiene GNC</input>
-  <br>
-  <input type="file"  name="archivoImagen">
 
 <br>
 

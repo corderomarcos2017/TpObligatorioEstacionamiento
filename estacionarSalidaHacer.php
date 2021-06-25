@@ -23,8 +23,9 @@
 			$vehiculo=$datos[3];
 			$precio=CalcularTotal($fechaIni, $fechaFin,$vehiculo);
 
-			MostrarResultados($patente, $fechaIni, $fechaFin, $precio);
-			GuardarArchivo("\n".$patente."|".$fechaIni."|".$fechaFin."|".$precio."|".$gnc."|".$vehiculo,"cobrados.txt"); //Cobrados
+			//MostrarResultados($patente, $fechaIni, $fechaFin, $precio);
+			estacionamiento::DescargarTicket($patente, $fechaIni, $fechaFin, $precio);
+			GuardarArchivo("\n".$patente."|".$fechaIni."|".$fechaFin."|".$precio."|".$gnc."|".$vehiculo."|".$_COOKIE["usuario"],"cobrados.txt"); //Cobrados
 			break;
 		}
 	}
@@ -36,10 +37,11 @@
 		CrearArchivo("estacionados.txt");
 		foreach ($matrizDePatentes as $datos){
 			if($datos[0]!=$patente){
-				GuardarArchivo("\n".$datos[0]."|".$datos[1]."|".$datos[2]."|".$datos[3]."|X","estacionados.txt"); 
+				GuardarArchivo("\n".$datos[0]."|".$datos[1]."|".$datos[2]."|".$datos[3]."|".$datos[4]."|X","estacionados.txt"); 
 			}
 		}
 		estacionamiento::CrearTabla("estacionados");	
 		estacionamiento::CrearTabla("cobrados");   
+		//header("Location: estacionarSalida.php");
 	}
 ?>
