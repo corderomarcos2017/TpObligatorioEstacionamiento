@@ -9,3 +9,4 @@ GGG123|2021-06-25 18:42|2021-06-25 18:58|32|NOGNC|moto|corderomartias@gmail.com
 a123|2021-06-24 19:07|2021-06-25 18:59|2644.4|SIGNC|auto|corderomartias@gmail.com
 ceci124|2021-06-25 17:44|2021-06-25 19:00|145.2|NOGNC|auto|corderomartias@gmail.com
 ceci125|2021-06-25 17:44|2021-06-25 19:08|177.6|NOGNC|camioneta|corderomartias@gmail.com
+pepito111|2021-06-18 20:16|2021-06-25 20:56|15488|SIGNC|auto|corderomarcos2016@gmail.com

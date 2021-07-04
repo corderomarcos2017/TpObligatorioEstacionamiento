@@ -11,6 +11,7 @@
 
         //--- Descarto todos los espacios en blanco y lleno con 0 adelante de la sifra
         $entero = trim($numero);
+        
         $entero = str_repeat("0", 15 - strlen($entero)) . $entero;
 
         //--- separar la cifra en 5 $array ------
@@ -152,7 +153,7 @@
         }
         return $enletra;
     }
-    $a=12349;
+    $a=178.25;
     echo "el numero es: $a <br>";
     echo "en letras : " . letras($a);
 ?>

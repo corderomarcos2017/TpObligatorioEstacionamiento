@@ -1,0 +1,5 @@
+ir al archivo php.ini y luego buscar
+;extension=gd
+
+y solo quitar el punto y coma...
+volver a reinicia el apache

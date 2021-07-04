@@ -52,7 +52,9 @@ class estacionamiento
 		foreach($listado as $auto){
 			switch ($bandera) {
 				case 'estacionados':
-					$tablaHTML.="<tr><td>$auto[0]</td><td>$auto[1]</td><td><img src='imagenes/$auto[0].jpg' alt='no tiene imagen' width='100'></td></tr>";					
+					$tablaHTML.="<tr><td>$auto[0]</td><td>$auto[1]</td><td><img src='imagenes/$auto[0].jpg' alt='no tiene imagen' width='100'></td></tr>";	
+					//$tablaHTML.="<tr><td>$auto[0]</td><td>$auto[1]</td><td><img src='imagenes/$auto[0].jpg' alt='no tiene imagen' width='100'></td></tr>";	
+
 					$archivoSalida="tablaestacionados.php";
 					break;
 				case 'cobrados':
